@@ -102,6 +102,12 @@
              "SPI_CLK":  "SPI_SCK",
              "SPI_CS":   "SPI_CS"
         },
+        "NUCLEO_F429ZI": {
+            "SPI_MOSI": "PB_5",
+            "SPI_MISO": "PA_6",
+            "SPI_CLK":  "PA_5",
+            "SPI_CS":   "PD_14"
+        },
         "NUMAKER_PFM_M453": {
              "SPI_MOSI": "PD_13",
              "SPI_MISO": "PD_14",
