@@ -16,6 +16,10 @@
         "SPI_MOSI": "D11",
         "SPI_MISO": "D12",
         "SPI_CLK": "D13",
+        "SPI_CS2": "NC",
+        "SPI_MOSI2": "NC",
+        "SPI_MISO2": "NC",
+        "SPI_CLK2": "NC",
         "I2C_SDA": "D14",
         "I2C_SCL": "D15",
         "I2C_TEMP_ADDR":"0x90",
@@ -106,7 +110,11 @@
             "SPI_MOSI": "PB_5",
             "SPI_MISO": "PA_6",
             "SPI_CLK":  "PA_5",
-            "SPI_CS":   "PD_14"
+            "SPI_CS":   "PD_14",
+            "SPI_MOSI2": "PF_9",
+            "SPI_MISO2": "PF_8",
+            "SPI_CLK2":  "PF_7",
+            "SPI_CS2":   "PG_1"
         },
         "NUMAKER_PFM_M453": {
              "SPI_MOSI": "PD_13",
