@@ -111,14 +111,14 @@
              "SPI_CS":   "SPI_CS"
         },
         "NUCLEO_F429ZI": {
-            "SPI_MOSI": "PB_5",
-            "SPI_MISO": "PA_6",
-            "SPI_CLK":  "PA_5",
-            "SPI_CS":   "PD_14",
-            "SPI_MOSI2": "PF_9",
-            "SPI_MISO2": "PF_8",
-            "SPI_CLK2":  "PF_7",
-            "SPI_CS2":   "PG_1"
+             "SPI_MOSI": "PB_5",
+             "SPI_MISO": "PA_6",
+             "SPI_CLK":  "PA_5",
+             "SPI_CS":   "PD_14",
+             "SPI_MOSI2": "PF_9",
+             "SPI_MISO2": "PF_8",
+             "SPI_CLK2":  "PF_7",
+             "SPI_CS2":   "PG_1"
         },
         "NUMAKER_PFM_M453": {
              "SPI_MOSI": "PD_13",
