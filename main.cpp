@@ -8,11 +8,6 @@
 #include "platform/mbed_retarget.h"
 
 
-SDBlockDevice sd1(MBED_CONF_APP_SPI_MOSI, MBED_CONF_APP_SPI_MISO, MBED_CONF_APP_SPI_CLK, MBED_CONF_APP_SPI_CS);
-FATFileSystem fs1("sd1", &sd1);
-SDBlockDevice sd2(MBED_CONF_APP_SPI_MOSI2, MBED_CONF_APP_SPI_MISO2, MBED_CONF_APP_SPI_CLK2, MBED_CONF_APP_SPI_CS2);
-FATFileSystem fs2("sd2", &sd2);
-
 Semaphore join(0, 2);
 Mutex print;
 
@@ -108,6 +103,18 @@ void run_test(void *arg) {
 
 int main()
 {
+    SDBlockDevice *sd[2];
+    FATFileSystem *fs[2];
+
+    if (MBED_CONF_APP_SPI_CLK != NC) {
+        sd[0] = new SDBlockDevice(MBED_CONF_APP_SPI_MOSI, MBED_CONF_APP_SPI_MISO, MBED_CONF_APP_SPI_CLK, MBED_CONF_APP_SPI_CS);
+        fs[0] = new FATFileSystem("sd1", sd[0]);
+    }
+    if (MBED_CONF_APP_SPI_CLK2 != NC) {
+        sd[1] = new SDBlockDevice(MBED_CONF_APP_SPI_MOSI2, MBED_CONF_APP_SPI_MISO2, MBED_CONF_APP_SPI_CLK2, MBED_CONF_APP_SPI_CS2);
+        fs[1] = new FATFileSystem("sd2", sd[1]);
+    }
+
 	my_printf("Welcome to the filesystem example.\n");
 
     // get time

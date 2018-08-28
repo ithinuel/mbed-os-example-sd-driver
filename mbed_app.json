@@ -80,7 +80,11 @@
              "SPI_MOSI": "PTE3",
              "SPI_MISO": "PTE1",
              "SPI_CLK":  "PTE2",
-             "SPI_CS":   "PTE4"
+             "SPI_CS":   "PTE4",
+             "SPI_MOSI2": "PTD2",
+             "SPI_MISO2": "PTD3",
+             "SPI_CLK2":  "PTD1",
+             "SPI_CS2":   "PTD0"
         },
         "K66F": {
              "SPI_MOSI": "PTE3",
